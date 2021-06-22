@@ -8,13 +8,16 @@ class Solution:
         for i in range(lenum):
             if not(found1) and nums[i]==1:
                 found1 = True
+                break
+        if not found1:
+            return 1
+        for i in range(lenum):
             if nums[i]<=0 or nums[i]>lenum:
                 nums[i] = 1
             
         for i in range(lenum):
             nums[abs(nums[i])-1] = -abs(nums[abs(nums[i])-1])
-        if not found1:
-            return 1
+        
         for i in range(lenum):
             if nums[i]>0:
                 return i+1
