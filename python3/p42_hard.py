@@ -14,6 +14,5 @@ class Solution:
             rmax[n-i-1]=max(height[n-i],rmax[n-i])
         for i in range(1,n-1):
             area += max(0,min(lmax[i]-height[i],rmax[i]-height[i]))
-            # print(lmax[i],rmax[i],area)
         return area
         
